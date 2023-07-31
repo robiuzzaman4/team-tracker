@@ -23,7 +23,7 @@ export const POST = async (req) => {
         const { name, designation, photoURL } = await req.json();
         const result = await Member.create({ name, designation, photoURL });
 
-        return new NextResponse("Post Method Working!", { status: 200 });
+        return new NextResponse(JSON.stringify(result), { status: 200 });
 
     } catch (error) {
         return new NextResponse("Database Error!", { status: 500 });

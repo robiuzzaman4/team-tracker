@@ -5,10 +5,11 @@ import { useRouter } from "next/navigation";
 
 const ActionButtons = ({ id }) => {
     const router = useRouter();
+    
     const handleDelete = async () => {
         const confirmed = confirm("Are you sure want to delete?");
         if (confirmed) {
-            const res = await fetch(`team-tracker-alpha.vercel.appapi/members?id=${id}`, {
+            const res = await fetch(`/api/members?id=${id}`, {
                 method: "DELETE"
             })
             if (res.ok) {

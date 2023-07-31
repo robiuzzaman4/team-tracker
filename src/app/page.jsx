@@ -1,9 +1,19 @@
+"use client";
+
 import Chip from "@/components/Chip";
 import MemberCard from "@/components/MemberCard";
-import { getMembers } from "@/utils/fetchingData";
+import { useEffect, useState } from "react";
 
-const Home = async () => {
-  const members = await getMembers();
+const Home = () => {
+  const [members, setMembers] = useState([]);
+
+  useEffect(() => {
+    fetch(`/api/members`, {
+      cache: 'no-cache'
+    })
+      .then((res) => res.json())
+      .then((data) => setMembers(data))
+  }, []);
 
   return (
     <section className="max-w-screen-md mx-auto px-4 grid gap-10">
