@@ -1,6 +1,6 @@
 // fetch all members data
 export const getMembers = async () => {
-    const res = await fetch('team-tracker-nmpjmzskg-robiuzzaman4.vercel.app/api/members', {
+    const res = await fetch('team-tracker-alpha.vercel.appapi/members', {
         cache: 'no-cache'
     })
 
@@ -12,7 +12,7 @@ export const getMembers = async () => {
 
 // fetch single members data
 export const getSingleMember = async (id) => {
-    const res = await fetch(`team-tracker-nmpjmzskg-robiuzzaman4.vercel.app/api/members/${id}`, {
+    const res = await fetch(`team-tracker-alpha.vercel.appapi/members/${id}`, {
         cache: 'no-cache'
     })
 

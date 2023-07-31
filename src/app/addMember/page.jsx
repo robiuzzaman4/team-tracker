@@ -20,7 +20,7 @@ const AddMember = () => {
         }
 
         try {
-            const res = await fetch(`team-tracker-nmpjmzskg-robiuzzaman4.vercel.app/api/members`, {
+            const res = await fetch(`team-tracker-alpha.vercel.appapi/members`, {
                 method: "POST",
                 headers: {
                     "content-type": "application/json"
