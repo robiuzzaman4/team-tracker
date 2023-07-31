@@ -1,6 +1,6 @@
 // fetch all members data
 export const getMembers = async () => {
-    const res = await fetch('http://localhost:3000/api/members', {
+    const res = await fetch('team-tracker-nmpjmzskg-robiuzzaman4.vercel.app/api/members', {
         cache: 'no-cache'
     })
 
@@ -12,7 +12,7 @@ export const getMembers = async () => {
 
 // fetch single members data
 export const getSingleMember = async (id) => {
-    const res = await fetch(`http://localhost:3000/api/members/${id}`, {
+    const res = await fetch(`team-tracker-nmpjmzskg-robiuzzaman4.vercel.app/api/members/${id}`, {
         cache: 'no-cache'
     })
 

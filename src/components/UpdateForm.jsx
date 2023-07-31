@@ -20,7 +20,7 @@ const UpdateForm = ({ _id, name, designation, photoURL }) => {
         }
 
         try {
-            const res = await fetch(`http://localhost:3000/api/members/${_id}`, {
+            const res = await fetch(`team-tracker-nmpjmzskg-robiuzzaman4.vercel.app/api/members/${_id}`, {
                 method: "PUT",
                 headers: {
                     "content-type": "application/json"

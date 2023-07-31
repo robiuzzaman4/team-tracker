@@ -8,7 +8,7 @@ const ActionButtons = ({ id }) => {
     const handleDelete = async () => {
         const confirmed = confirm("Are you sure want to delete?");
         if (confirmed) {
-            const res = await fetch(`http://localhost:3000/api/members?id=${id}`, {
+            const res = await fetch(`team-tracker-nmpjmzskg-robiuzzaman4.vercel.app/api/members?id=${id}`, {
                 method: "DELETE"
             })
             if (res.ok) {
