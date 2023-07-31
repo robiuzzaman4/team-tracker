@@ -29,7 +29,7 @@ const AddMember = () => {
             })
 
             if (res.ok) {
-                router.push("/"); 
+                router.refresh(); 
             } else {
                 throw new Error("Failed to create new Member!")
             }
