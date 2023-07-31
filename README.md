@@ -1,6 +1,5 @@
-# Team Tracker
-
-Apply CRUD operation using Next Js and MongoDB.
+# Build and Deploy a Modern Next.js 13 CRUD Application | React JS, Next JS 13, MongoDB, Tailwind CSS.
+![Car Showcase](https://i.ibb.co/xmW9SWp/Screenshot-333.png)
 
 ## Getting Started
 
