@@ -7,17 +7,16 @@ const ActionButtons = ({ id }) => {
     const router = useRouter();
     
     const handleDelete = async () => {
-        // const confirmed = confirm("Are you sure want to delete?");
-        // if (confirmed) {
-        //     const res = await fetch(`team-tracker-alpha.vercel.app/api/members?id=${id}`, {
-        //         cache: 'no-cache',
-        //         method: "DELETE"
-        //     })
-        //     if (res.ok) {
-        //         router.refresh();
-        //     }
-        // }
-        console.log('sdfhk');
+        const confirmed = confirm("Are you sure want to delete?");
+        if (confirmed) {
+            const res = await fetch(`https://team-tracker-alpha.vercel.app/api/members?id=${id}`, {
+                cache: 'no-cache',
+                method: "DELETE"
+            })
+            if (res.ok) {
+                router.refresh();
+            }
+        }
     }
     return (
         <div className="flex items-center justify-center gap-1">

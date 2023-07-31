@@ -9,34 +9,34 @@ const AddMember = () => {
 
     const handleAddNewMember = async (e) => {
         e.preventDefault();
-        // const name = e.target.name.value;
-        // const designation = e.target.designation.value;
-        // const photoURL = e.target.photoURL.value;
+        const name = e.target.name.value;
+        const designation = e.target.designation.value;
+        const photoURL = e.target.photoURL.value;
 
-        // const newMember = {
-        //     name,
-        //     designation,
-        //     photoURL
-        // }
+        const newMember = {
+            name,
+            designation,
+            photoURL
+        }
 
-        // try {
-        //     const res = await fetch(`team-tracker-alpha.vercel.app/api/members`, {
-        //         method: "POST",
-        //         headers: {
-        //             "content-type": "application/json"
-        //         },
-        //         body: JSON.stringify(newMember)
-        //     })
+        try {
+            const res = await fetch(`https://team-tracker-alpha.vercel.app/api/members`, {
+                method: "POST",
+                headers: {
+                    "content-type": "application/json"
+                },
+                body: JSON.stringify(newMember)
+            })
 
-        //     if (res.ok) {
-        //         router.push("/"); 
-        //     } else {
-        //         throw new Error("Failed to create new Member!")
-        //     }
+            if (res.ok) {
+                router.push("/"); 
+            } else {
+                throw new Error("Failed to create new Member!")
+            }
 
-        // } catch (error) {
-        //     console.log(error.message);
-        // }
+        } catch (error) {
+            console.log(error.message);
+        }
     }
 
     return (
