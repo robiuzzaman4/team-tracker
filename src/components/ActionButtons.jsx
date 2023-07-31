@@ -10,6 +10,7 @@ const ActionButtons = ({ id }) => {
         const confirmed = confirm("Are you sure want to delete?");
         if (confirmed) {
             const res = await fetch(`/api/members?id=${id}`, {
+                cache: 'no-cache',
                 method: "DELETE"
             })
             if (res.ok) {
