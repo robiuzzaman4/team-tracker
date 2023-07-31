@@ -12,7 +12,7 @@ const UpdateMember = ({ params }) => {
     const [singleMember, setSingleMember] = useState([]);
     
     useEffect(() => {
-        fetch(`/api/members/${id}`, {
+        fetch(`team-tracker-alpha.vercel.app/api/members/${id}`, {
             cache: 'no-cache'
         })
         .then((res) => res.json())
