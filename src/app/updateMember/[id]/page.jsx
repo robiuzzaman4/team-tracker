@@ -1,23 +1,11 @@
-"use client";
-
 import Chip from "@/components/Chip";
 import UpdateForm from "@/components/UpdateForm";
 import { getSingleMember } from "@/utils/fetchingData";
-import { useEffect, useState } from "react";
 
 const UpdateMember = ({ params }) => {
     const { id } = params;
 
     // get single member data
-    const [singleMember, setSingleMember] = useState([]);
-    
-    useEffect(() => {
-        fetch(`team-tracker-alpha.vercel.app/api/members/${id}`, {
-            cache: 'no-cache'
-        })
-        .then((res) => res.json())
-        .then((data) => setSingleMember(data));
-    }, [id]);
 
 
     return (
@@ -25,7 +13,7 @@ const UpdateMember = ({ params }) => {
             <Chip>Update Member</Chip>
 
             {/* form */}
-            <UpdateForm {...singleMember} />
+            {/* <UpdateForm {...singleMember} /> */}
         </section>
     );
 };
